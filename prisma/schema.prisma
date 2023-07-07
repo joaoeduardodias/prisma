@@ -9,8 +9,8 @@ datasource db {
 
 model Courses {
   id          String   @id @default(uuid())
-  name        String
-  description String
+  name        String   @unique
+  description String?
   duration    Int
   created_at  DateTime @default(now())
 
